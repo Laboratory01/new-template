@@ -1,0 +1,538 @@
+@import "normalize.css";
+@import url("http://fonts.googleapis.com/css?family=Roboto+Condensed:300italic,400italic,400,300&subset=latin,cyrillic-ext")
+/*
+ * HTML5 Boilerplate
+ *
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html,
+button,
+input,
+select,
+textarea {
+    color: #222;
+}
+
+body {
+    font-size: 1em;
+    line-height: 1.4;
+    background url(../images/body-bg.jpg)
+}
+
+/*
+ * Remove text-shadow in selection highlight: h5bp.com/i
+ * These selection rule sets have to be separate.
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+/*
+ * Remove the gap between images and the bottom of their containers: h5bp.com/i/440
+ */
+
+img {
+    vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+    resize: vertical;
+}
+
+/* ==========================================================================
+   Chrome Frame prompt
+   ========================================================================== */
+
+.chromeframe {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+/*
+ * The Magnificent Micro Clearfix
+ *
+ * Useful for clearing floats without structural markup.
+ * Prevents margin-collapsing on child elements in most cases.
+ *
+ * Known issues:
+ *
+ * 1. For IE 6/7 when applied to an element that contains only left-floated
+ *    children the bottom margin on child elements will be collapsed.
+ *
+ * 2. For Firefox versions prior to 3.5 when applied to the first child element
+ *    of body, and the element does not have non-zero padding, extra space will
+ *    appear between the body and the first child.
+ *
+ * See http://nicolasgallagher.com/micro-clearfix-hack/
+ * and http://j.mp/bestclearfix
+ *
+ */
+
+clearfix()
+  &:before
+  &:after
+    content: ""
+    display: table
+  &:after
+    clear: both
+  zoom: 1 if support-for-ie
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+body
+	margin 0px
+	padding 0px
+	clearfix()
+
+.wrapper 
+	display block
+	margin 0 auto 
+	padding 0px
+	width 970px
+	box-shadow 2px 2px 3px #000
+	overflow hidden
+	position relative
+
+header
+	margin 0px
+	padding 0px
+	width 100%
+	height 80px
+	background url('../images/header-bg.jpg') no-repeat left top
+
+header ul.menu
+	margin 0px 0px 0px 90px
+	padding 9px
+	list-style none
+
+header ul.menu li 
+	display inline-block
+	margin 0 6px
+	padding-right 15px
+	background url("../images/header-paginator.png") no-repeat right center
+
+header ul.menu li a 
+	text-decoration none
+	color #fff
+	font-size 15px
+	font-family 'Roboto Condensed', sans-serif
+
+header ul.menu li a:hover
+header ul.menu li span.separator:hover
+	text-decoration underline
+
+header ul.menu li span.separator 
+	color #fff
+	font-size 15px
+	font-family 'Roboto Condensed', sans-serif
+
+/*==========================================
+=            Header Second Menu            =
+==========================================*/
+
+header ul.menu_second
+	margin 0 0 0 0
+	padding 0
+	list-style none
+	display block
+	width 100%
+	text-align right
+	font-family 'Roboto Condensed', sans-serif
+
+header ul.menu_second li
+	margin-right 16px
+	display inline-block
+
+header ul.menu_second li a
+header ul.menu_second li span
+	color #8E1558
+	text-decoration underline
+	font-size 15px
+
+header ul.menu_second li a:hover
+header ul.menu_second li span:hover
+	text-decoration none
+
+
+/*-----  End of Header Second Menu  ------*/
+
+
+/*==========================================
+=            Header Create Date            =
+==========================================*/
+
+.created-date
+	font-size 11px
+	font-weight bold
+	display inline
+	margin-left 55px
+	position relative
+	top -13px
+
+.created-date .custom
+.created-date .custom p 
+	display inline
+	margin 0
+
+
+/*-----  End of Header Create Date  ------*/
+
+
+/*===============================
+=            Section header          =
+===============================*/
+
+section
+	margin 0
+	padding 0 0 0 50px
+	background #fff url("../images/section-left-bg.jpg") repeat-y left top
+	vertical-align top
+
+section .logo 
+	display inline-block
+	vertical-align top
+
+section .section-header-banner
+	display inline-block
+	margin-left 34px
+	height 126px
+	width 378px
+
+section .section-module-wrapper
+	display inline-block
+	vertical-align top
+	height 117px
+	margin-left 8px
+
+section .section-header-socialButtons
+section .section-header-search
+	display block
+
+section .section-header-socialButtons
+	height 48%
+	padding-top 15px
+
+section .section-header-search
+	display inline-block
+
+/*==========  Search  ==========*/
+
+section input#mod-search-searchword
+	width 146px
+	margin-right 6px
+	border-radius 2px
+	border 1px solid #8e1558
+	box-shadow inset 1px 1px 2px #000
+	height 27px
+	padding-left 6px
+
+section .search-button 
+	background url(../images/search-button.png)no-repeat
+	width 70px
+	height 35px
+
+section input[type=submit]
+	border none
+
+
+/*==========  Section Header Navbar  ==========*/
+
+section .section-header-navbar-icons
+	display block
+	background-image url(../images/navbar-icons.png)
+	list-style none
+
+section .section-header-navbar
+	height 110px
+
+section .section-header-navbar ul
+	vertical-align middle
+	margin 0
+	height 80px
+	line-height: 86px;
+	text-align right
+
+section .section-header-navbar ul li 
+	display inline-block
+	min-width 56px
+	vertical-align bottom
+
+section .section-header-navbar ul li span
+	width 56px
+	font-size 10px 
+	text-align center
+	display none
+	line-height 1
+
+section .section-header-navbar ul li:hover span
+	display block
+
+.sprite-bird{ background-position: 0 0; width: 50px; height: 52px; } 
+.sprite-bugs{ background-position: -100px 0; width: 56px; height: 54px; } 
+.sprite-building{ background-position: -206px 0; width: 39px; height: 62px; } 
+.sprite-cake{ background-position: -295px 0; width: 38px; height: 61px; } 
+.sprite-car{ background-position: -383px 0; width: 56px; height: 40px; } 
+.sprite-cups{ background-position: -489px 0; width: 47px; height: 50px; } 
+.sprite-dress{ background-position: -586px 0; width: 55px; height: 53px; } 
+.sprite-lips{ background-position: -691px 0; width: 47px; height: 50px; } 
+.sprite-lovers{ background-position: -788px 0; width: 47px; height: 45px; } 
+.sprite-photo{ background-position: -885px 0; width: 56px; height: 55px; } 
+.sprite-rings{ background-position: -991px 0; width: 39px; height: 55px; } 
+.sprite-votes{ background-position: -1080px 0; width: 43px; height: 53px; } 
+
+/*-----  End of Section  ------*/
+
+
+/*===============================
+=            CONTENT            =
+===============================*/
+
+/*==========  LEFT COLUMN  ==========*/
+
+.left-column
+	width:330px
+	margin 0
+	float left
+	padding 0
+
+.left-column ul
+	list-style none
+	margin 0
+	padding 0
+	max-width 330px
+
+.left-column ul li 
+	display inline-block
+	width 88px
+	height 70px
+	position relative
+
+.left-column ul li span
+	display none
+	font-size 11px
+	position absolute
+	line-height 1
+	font-weight bold
+
+.left-column ul li:hover span
+	display block
+
+.left-column .module-left-column h3
+.left-column .module-left-column h3 a
+	margin-top 0
+	color #88015A
+	font-size 26px
+	text-decoration none
+	margin-bottom:10px
+
+.module 
+	margin-bottom 20px
+
+
+/*==========  HEADER BLOCK  ==========*/
+
+.header-block h3
+	background url(../images/headers-bg.jpg)no-repeat
+	color #fff !important
+	padding-left 15px
+	font-size 26px
+	margin 0 !important
+	text-align left !important
+
+/*-----  End of CONTENT  ------*/
+
+
+/*====================================
+=            RIGHT COLUMN            =
+====================================*/
+.main
+	clearfix()
+
+.right-column
+    float right
+    height 600px
+    margin 0
+    padding 0
+    width 330px
+
+.right-column ul
+	margin 0 
+	padding 0
+	list-style none
+
+.right-column ul li a
+	color #88015A
+	font-size 14px
+	text-decoration none
+
+.right-column h3
+.right-column h3 a
+	color #88015A
+	font-size 24px
+	text-align right
+	text-decoration none
+	padding-right 15px
+	margin-bottom 12px
+	margin-top 12px
+
+.right-column .header-block
+	border-left 1px solid #E8E8E8
+	border-bottom 1px solid #E8E8E8
+	border-right 1px solid #E8E8E8
+
+.right-column .module-content
+	padding 10px
+	margin-bottom 30px
+
+.right-column .module-content ul
+	vertical-align middle
+
+.right-column .module 
+	margin 0
+
+.right-column .favorites h3
+	background url(../images/stars.png)no-repeat center top
+	height 40px
+	text-decoration underline
+	margin-bottom 0px
+
+.right-column .customfavorites
+	text-align right
+	font-size 12px
+	color #333
+	font-style italic
+
+.right-column .favorites .module-content
+	height auto
+
+.right-column .favorites h3
+
+
+
+
+/*-----  End of RIGHT COLUMN  ------*/
+
+
+
+
+/*==============================
+=            FOOTER            =
+==============================*/
+
+footer
+	margin 0 auto
+	padding 0
+	height 60px
+	width 970px
+
+footer .footer-copyright
+footer .footer-logo
+footer .footer-links
+	display inline-block
+	color #010101
+	font-size 16px
+	vertical-align middle
+	font-weight bold
+
+footer .footer-links ul
+	list-style none
+	margin 0
+	padding 0
+	text-align right
+
+footer .footer-links
+	width 36%
+
+footer .footer-logo
+	text-align center
+	padding-left 26px
+
+footer .footer-copyright
+footer .footer-logo
+	width 30%
+
+footer .footer-copyright
+	text-align left
+
+footer .footer-links ul li 
+	display inline-block
+
+footer .footer-links ul li a
+	color #000
+	font-weight bold
+	text-decoration underline
+
+footer .footer-links ul li a:hover
+	text-decoration none
+	color #88015A
+
+/*-----  End of FOOTER  ------*/
+
+
+/*===========================================
+=            MAIN IMAGE ON INDEX            =
+===========================================*/
+
+
+
+.margin 
+	height 50px
+	width 100%
+	display block
+
+.main-img 
+    position absolute
+    top 119px
+    left 38%
+
+/*-----  End of MAIN IMAGE ON INDEX  ------*/
+
+
+
+
+
