@@ -20,6 +20,7 @@ require_once(dirname(__FILE__) . '/php/_code.php');
     <jdoc:include type="head" />
     <link rel="stylesheet" href="<?php echo $tpl->css; ?>/main.css">
     <link rel="stylesheet" href="<?php echo $tpl->css; ?>/normalize.css">
+    <script src="<?php echo $tpl->js; ?>/bootstrap/js/bootstrap.js"></script>
 </head>
 <body>
     <div class="wrapper">
@@ -27,7 +28,7 @@ require_once(dirname(__FILE__) . '/php/_code.php');
            <div class="top-block">
                 <jdoc:include type="modules" name="top-block" />
             </div> 
-            <div class="header-second-menu">
+           <div class="header-second-menu">
                 <jdoc:include type="modules" name="header-second-menu" />
             </div>
             <div class="created-date">
@@ -64,6 +65,7 @@ require_once(dirname(__FILE__) . '/php/_code.php');
         <section class="main">
             <div class="component content">
                 <jdoc:include type="modules" name="pre_component" />
+                <jdoc:include type="message" />
                 <jdoc:include type="component" />
                 <jdoc:include type="modules" name="post_component" />
             </div>
@@ -94,14 +96,10 @@ require_once(dirname(__FILE__) . '/php/_code.php');
                 </ul>
             </div>
     </footer>
-
-       
-
     <?php echo $tpl->renderJS(); ?>
-
     <?php if ($this->countModules('counters')) : ?>
         <div style="display: none;"><jdoc:include type="modules" name="counters" /></div>
     <?php endif; ?>
-
 </body>
+
 </html>

@@ -411,7 +411,6 @@ section .section-header-navbar ul li:hover span {
 }
 .right-column {
   float: right;
-  height: 600px;
   margin: 0;
   padding: 0;
   width: 330px;
@@ -466,11 +465,10 @@ section .section-header-navbar ul li:hover span {
 .right-column .favorites .module-content {
   height: auto;
 }
-.right-column .favorites h3,
-/*-----  End of RIGHT COLUMN  ------*/,
+/*-----  End of RIGHT COLUMN  ------*/
 /*==============================
 =            FOOTER            =
-==============================*/,
+==============================*/
 footer {
   margin: 0 auto;
   padding: 0;
@@ -533,3 +531,36 @@ footer .footer-links ul li a:hover {
   left: 38%;
 }
 /*-----  End of MAIN IMAGE ON INDEX  ------*/
+/*=========================================
+=            COMPONENT CONTENT            =
+=========================================*/
+.content {
+  width: 585px;
+  display: inline-block;
+}
+.cck_value_text h3 {
+  margin: 0px 0px;
+}
+/*-----  End of COMPONENT CONTENT  ------*/
+div.seb_css3 {
+  padding: 0 !important;
+}
+.cck-plr div.cck_value_upload_image {
+  width: 135px;
+  height: 90px;
+}
+.cck-plr img {
+  box-shadow: 1px 1px 1px #706f70;
+}
+ul.nav {
+  position: relative;
+  height: 400px;
+}
+ul.nav li ul {
+  display: none;
+}
+ul.nav li.active ul {
+  display: block;
+  position: absolute;
+  width: 330px;
+}
