@@ -65,7 +65,7 @@ require_once(dirname(__FILE__) . '/php/_code.php');
         <section class="main">
             <div class="component content">
                 <jdoc:include type="modules" name="pre_component" />
-                <jdoc:include type="message" />
+                <div class="messgae"><jdoc:include type="message" /></div>              
                 <jdoc:include type="component" />
                 <jdoc:include type="modules" name="post_component" />
             </div>

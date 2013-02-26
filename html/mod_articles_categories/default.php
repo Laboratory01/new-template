@@ -9,6 +9,11 @@
 // no direct access
 defined('_JEXEC') or die;
 ?>
+<script type="text/javascript">
+	jQuery(document).ready(function() {
+		$('ul.nav li:first').addClass('active');
+	})
+</script>
 <ul class="<?php echo $moduleclass_sfx; ?>">
 <?php
 require JModuleHelper::getLayoutPath('mod_articles_categories', $params->get('layout', 'default').'_items');
