@@ -21,8 +21,10 @@ require_once(dirname(__FILE__) . '/php/_code.php');
     <link rel="stylesheet" href="<?php echo $tpl->css; ?>/main.css">
     <link rel="stylesheet" href="<?php echo $tpl->css; ?>/normalize.css">
     <script src="<?php echo $tpl->js; ?>/bootstrap/js/bootstrap.js"></script>
+    <script src="<?php echo $tpl->js; ?>/application.js"></script>
 </head>
 <body>
+    <?php unset($this->_scripts['http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js']); ?>
     <div class="wrapper">
         <header>
            <div class="top-block">
@@ -65,7 +67,7 @@ require_once(dirname(__FILE__) . '/php/_code.php');
         <section class="main">
             <div class="component content">
                 <jdoc:include type="modules" name="pre_component" />
-                <div class="messgae"><jdoc:include type="message" /></div>              
+                <div class="messgae"><jdoc:include type="message" /></div>                       
                 <jdoc:include type="component" />
                 <jdoc:include type="modules" name="post_component" />
             </div>

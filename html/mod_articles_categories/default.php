@@ -10,7 +10,7 @@
 defined('_JEXEC') or die;
 ?>
 <script type="text/javascript">
-	jQuery(document).ready(function() {
+	jQuery(document).ready(function($) {
 		$('ul.nav li:first').addClass('active');
 	})
 </script>

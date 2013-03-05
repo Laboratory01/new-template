@@ -146,7 +146,7 @@ header
 	background url('../images/header-bg.jpg') no-repeat left top
 
 header ul.menu
-	margin 0px 0px 0px 90px
+	margin 0px 0px 0px 80px
 	padding 9px
 	list-style none
 
@@ -155,6 +155,8 @@ header ul.menu li
 	margin 0 6px
 	padding-right 15px
 	background url("../images/header-paginator.png") no-repeat right center
+	&:last-child
+		background none
 
 header ul.menu li a 
 	text-decoration none
@@ -239,7 +241,7 @@ section .logo
 
 section .section-header-banner
 	display inline-block
-	margin-left 34px
+	margin-left 27px
 	height 126px
 	width 378px
 
@@ -247,7 +249,7 @@ section .section-module-wrapper
 	display inline-block
 	vertical-align top
 	height 117px
-	margin-left 8px
+	margin-left 5px
 
 section .section-header-socialButtons
 section .section-header-search
@@ -397,7 +399,7 @@ section .section-header-navbar ul li:hover span
     float right
     margin 0
     padding 0
-    width 330px
+    width 310px
 
 .right-column ul
 	margin 0 
@@ -426,7 +428,7 @@ section .section-header-navbar ul li:hover span
 
 .right-column .module-content
 	padding 10px
-	margin-bottom 30px
+	margin-bottom 0px
 
 .right-column .module-content ul
 	vertical-align middle
@@ -450,14 +452,7 @@ section .section-header-navbar ul li:hover span
 	height auto
 
 
-
-
-
-
 /*-----  End of RIGHT COLUMN  ------*/
-
-
-
 
 /*==============================
 =            FOOTER            =
@@ -517,8 +512,6 @@ footer .footer-links ul li a:hover
 =            MAIN IMAGE ON INDEX            =
 ===========================================*/
 
-
-
 .margin 
 	height 50px
 	width 100%
@@ -532,7 +525,6 @@ footer .footer-links ul li a:hover
 /*-----  End of MAIN IMAGE ON INDEX  ------*/
 
 
-
 /*=========================================
 =            COMPONENT CONTENT            =
 =========================================*/
@@ -544,7 +536,7 @@ footer .footer-links ul li a:hover
 
 ul.nav
 	position relative
-	height 400px
+	height 206px
 	li ul
 		display none
 
@@ -609,46 +601,41 @@ ul.nav li.active ul li ul li
 /*==========  Articles Catalog  ==========*/
 
 .position1
-	.ct_title
-		.value h3
+	value h3
 			margin 0px
 			font-size 19pt
-	.ct_state label
-	.ct_city label
-	.ct_price label
-	.work_time label
-	.work_time_to label
+	label
 		display none
 
-.position1
+.form .position1
+	#sel
+		height 22px
+		overflow hidden
+		position absolute
+		width 85px
+	div.field
+		display inline-block
 	select
-		&#ct_state
-		&#ct_city
-		&#ct_price
-		&#work_time
-		&#work_time_to
 			width 118px
 			display inline-block
 			background none
 			border none
-	.ct_state
-	.ct_city
-	.ct_price
-	.work_time
-	.work_time_to
-		display inline-block
-		margin-right 10px
+			opacity 0
 		div.value
 			border 2px solid #88015A
+			display inline-block
 			background url(../images/arrow.png) no-repeat right center
 			overflow hidden
 			width 100px
+			height 22px
+	.button_submit .value
+		display none
 
 .position2 
 	display inline-block 
 	.company_logo a img
 		width 150px
-		height 113px
+		max-height 113px
 		box-shadow 1px 1px 1px #666
 
 .position3
@@ -666,33 +653,168 @@ ul.nav li.active ul li ul li
 	.description .value
 		margin-left 15px
 
-#cck9_label_ct_state
-#cck9_label_telephone
-#cck9_label_email
-#cck9_label_company_site
-#cck9_label_count_of_guests
-#cck9_label_work_time
-#cck9_label_work_time_to
-#cck9_label_ct_price
-	color #D10132
-	font-size 12px
-	line-height 1
-	font-weight normal
+.vertical
+	.cck_value
+		color #D10132
+		font-size 12px
+		line-height 1
+		font-weight normal
+	.cck_value_text
+		width 120px
+		font-size 12px !important
 
-#cck9_ct_state
-#cck9_telephone
-#cck9_email
-#cck9_company_site
-#cck9_count_of_guests
-#cck9_work_time
-#cck9_work_time_to
-#cck9_ct_price
+label[for=ct_state]
+label[for=telephone]
+label[for=email]
+label[for=company_site]
+label[for=count_of_guests]
+label[for=work_time]
+label[for=work_time_to]
+label[for=ct_price]
 	color #000
 	font-weight bold
 	font-size 12px
+	vertical-align top
 
-
+.cck_page_list
+	float left
 /*-----  End of SEBLOD  ------*/
 
+.component
+	width 606px
+	position relative
+	h1
+		display none
+.source_articles_list:hover
+	background #C88FB3
+	.sart_title
+		a
+			color #CD0127
+.source_articles_list
+.source_articles_list_deeper
+	padding 5px
+	.position1
+		position relative
+		.sart_title
+		.art_catid
+		.art_created
+			display inline-block
+		.sart_title
+			h3
+				margin 0 0 10px 0
+		.art_catid
+			position absolute
+			right 50px
+			top 7px
+		.art_catid a
+			color #CB0121
+		.art_created
+			background url(../images/date-circle.png) no-repeat center center
+			font-size 10px
+			text-align center
+			width 37px
+			height 26px
+			color #fff
+			padding-top 11px
+			position absolute
+			right 0px
+	.position2
+		display block
+		.sart_image
+			display inline-block
+			padding 2px
+			background #fff
+			box-shadow 1px 1px 2px #706F70
+		.sart_image
+			margin-right 7px
+		.sart_announce
+			display inline-block
+			vertical-align top
+		.sart_announce
+			width 400px
+			font-size 14px 
+			font-family 'Roboto Condensed', sans-serif
+	.position3
+		display block
+		width auto
+		height auto
+		.sart_author
+			.label
+			.value
+				display inline-block
+				margin-right 10px
+				font-weight bold
+				font-size 12px
+			.value
+				text-decoration underline
 
+
+/*==================================
+=            PAGINATION            =
+==================================*/
+
+.pagination
+	p.counter
+		display inline-block
+
+ul.pagination 
+	list-style none
+	margin 0 0 0 133px
+	padding 0
+	display inline-block
+	li
+		display inline-block
+		margin-right 10px
+		a
+			font-size 12px
+			text-decoration none
+			color #000
+			font-weight bold
+		a:hover
+			color #88005A
+		span
+			font-weight bold
+			font-size 12px
+			color #88005A
+
+
+/*-----  End of PAGINATION  ------*/
+
+/*=================================
+=            ROS STYLE            =
+=================================*/
+.hiddenposition{
+	display:none;
+}
+
+/*-----  End of ROS STYLE  ------*/
+
+/*==============================
+=            BANNER            =
+==============================*/
+
+.custom_banner_inner
+	position absolute
+	right 0px
+
+
+
+
+/*-----  End of BANNER  ------*/
+
+/*===================================
+=            BREADCRUMBS            =
+===================================*/
+
+.breadcrumbs
+	a
+		color #88015A
+		font-size 14px
+		font-style italic
+	span
+		color #A8011E
+		font-style italic
+		font-size 14px
+
+/*-----  End of BREADCRUMBS  ------*/
 

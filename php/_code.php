@@ -17,7 +17,7 @@ require_once(dirname(__FILE__) . DS . 'template.php');
 $tpl = new JBlankTemplate($this);
 
 // main actions
-$tpl->removeMootools();
+//$tpl->removeMootools();
 $tpl->loadJS();
 //$tpl->loadCSS();
 $tpl->loadMeta();

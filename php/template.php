@@ -19,7 +19,7 @@ class JBlankTemplate
      * Others
      */
     const FILE_SIZE_MIN     = 10;
-    const JS_JQUERY_VERSION = '1.7.1';
+    const JS_JQUERY_VERSION = '1.8.1';
 
     /**
      *  Default params values
@@ -239,7 +239,7 @@ class JBlankTemplate
 
             } elseif ($jsJqueryCore == '3') {
                 $jqueryCore =
-                    'http://ajax.googleapis.com/ajax/libs/jquery/' . self::JS_JQUERY_VERSION . '/jquery.min.js';
+                 'http://ajax.googleapis.com/ajax/libs/jquery/' . self::JS_JQUERY_VERSION . '/jquery.min.js';
             }
 
             if ((int)$this->params->get('js_jquery_tools', 0)) {

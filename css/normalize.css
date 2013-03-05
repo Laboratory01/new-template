@@ -131,7 +131,7 @@ h1 {
 
 h2 {
     font-size: 1.5em;
-    margin: 0.83em 0;
+    margin: 0 0 10px 0;
     font-family: 'Roboto Condensed', sans-serif;
 }
 
@@ -593,12 +593,14 @@ table {
 .nav-tabs li ul {
     left:0px;
 }
+
 .nav-tabs > li {
   padding-top: 5px;
   padding-bottom: 5px;
   line-height: 5px;
-  padding-right:11px;
-    background: #ededed url(../images/htabs-unactive.png) no-repeat right center; /* Old browsers */
+  padding-right:8px;
+    background: url(../images/htabs-unactive-bg.png) no-repeat right center; /* Old browsers */
+
 }
 .nav-tabs > li > a:hover,
 .nav-tabs > li > a:focus {
@@ -649,4 +651,17 @@ table {
 
 
 /*-----  End of HTABS  ------*/
+
+
+/*==============================
+=            TABLES            =
+==============================*/
+
+table {}
+tr {}
+td{width:50%;text-align: left;}
+
+
+/*-----  End of TABLES  ------*/
+
 

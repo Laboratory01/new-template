@@ -127,7 +127,7 @@ header {
   background: url("../images/header-bg.jpg") no-repeat left top;
 }
 header ul.menu {
-  margin: 0px 0px 0px 90px;
+  margin: 0px 0px 0px 80px;
   padding: 9px;
   list-style: none;
 }
@@ -136,6 +136,9 @@ header ul.menu li {
   margin: 0 6px;
   padding-right: 15px;
   background: url("../images/header-paginator.png") no-repeat right center;
+}
+header ul.menu li:last-child {
+  background: none;
 }
 header ul.menu li a {
   text-decoration: none;
@@ -211,7 +214,7 @@ section .logo {
 }
 section .section-header-banner {
   display: inline-block;
-  margin-left: 34px;
+  margin-left: 27px;
   height: 126px;
   width: 378px;
 }
@@ -219,7 +222,7 @@ section .section-module-wrapper {
   display: inline-block;
   vertical-align: top;
   height: 117px;
-  margin-left: 8px;
+  margin-left: 5px;
 }
 section .section-header-socialButtons,
 section .section-header-search {
@@ -413,7 +416,7 @@ section .section-header-navbar ul li:hover span {
   float: right;
   margin: 0;
   padding: 0;
-  width: 330px;
+  width: 310px;
 }
 .right-column ul {
   margin: 0;
@@ -442,7 +445,7 @@ section .section-header-navbar ul li:hover span {
 }
 .right-column .module-content {
   padding: 10px;
-  margin-bottom: 30px;
+  margin-bottom: 0px;
 }
 .right-column .module-content ul {
   vertical-align: middle;
@@ -540,7 +543,7 @@ footer .footer-links ul li a:hover {
 }
 ul.nav {
   position: relative;
-  height: 400px;
+  height: 206px;
 }
 ul.nav li ul {
   display: none;
@@ -597,51 +600,46 @@ ul.nav li.active ul li ul li {
 =            SEBLOD            =
 ==============================*/
 /*==========  Articles Catalog  ==========*/
-.position1 .ct_title .value h3 {
+.position1 value h3 {
   margin: 0px;
   font-size: 19pt;
 }
-.position1 .ct_state label,
-.position1 .ct_city label,
-.position1 .ct_price label,
-.position1 .work_time label,
-.position1 .work_time_to label {
+.position1 label {
   display: none;
 }
-.position1 select#ct_state,
-.position1 select#ct_city,
-.position1 select#ct_price,
-.position1 select#work_time,
-.position1 select#work_time_to {
+.form .position1 #sel {
+  height: 22px;
+  overflow: hidden;
+  position: absolute;
+  width: 85px;
+}
+.form .position1 div.field {
+  display: inline-block;
+}
+.form .position1 select {
   width: 118px;
   display: inline-block;
   background: none;
   border: none;
+  opacity: 0;
 }
-.position1 .ct_state,
-.position1 .ct_city,
-.position1 .ct_price,
-.position1 .work_time,
-.position1 .work_time_to {
-  display: inline-block;
-  margin-right: 10px;
-}
-.position1 .ct_state div.value,
-.position1 .ct_city div.value,
-.position1 .ct_price div.value,
-.position1 .work_time div.value,
-.position1 .work_time_to div.value {
+.form .position1 div.value {
   border: 2px solid #88015a;
+  display: inline-block;
   background: url("../images/arrow.png") no-repeat right center;
   overflow: hidden;
   width: 100px;
+  height: 22px;
+}
+.form .position1 .button_submit .value {
+  display: none;
 }
 .position2 {
   display: inline-block;
 }
 .position2 .company_logo a img {
   width: 150px;
-  height: 113px;
+  max-height: 113px;
   box-shadow: 1px 1px 1px #666;
 }
 .position3 {
@@ -661,29 +659,190 @@ ul.nav li.active ul li ul li {
 .position3 .description .value {
   margin-left: 15px;
 }
-#cck9_label_ct_state,
-#cck9_label_telephone,
-#cck9_label_email,
-#cck9_label_company_site,
-#cck9_label_count_of_guests,
-#cck9_label_work_time,
-#cck9_label_work_time_to,
-#cck9_label_ct_price {
+.vertical .cck_value {
   color: #d10132;
   font-size: 12px;
   line-height: 1;
   font-weight: normal;
 }
-#cck9_ct_state,
-#cck9_telephone,
-#cck9_email,
-#cck9_company_site,
-#cck9_count_of_guests,
-#cck9_work_time,
-#cck9_work_time_to,
-#cck9_ct_price {
+.vertical .cck_value_text {
+  width: 120px;
+  font-size: 12px !important;
+}
+label[for=ct_state],
+label[for=telephone],
+label[for=email],
+label[for=company_site],
+label[for=count_of_guests],
+label[for=work_time],
+label[for=work_time_to],
+label[for=ct_price] {
   color: #000;
   font-weight: bold;
   font-size: 12px;
+  vertical-align: top;
+}
+.cck_page_list {
+  float: left;
 }
 /*-----  End of SEBLOD  ------*/
+.component {
+  width: 606px;
+  position: relative;
+}
+.component h1 {
+  display: none;
+}
+.source_articles_list:hover {
+  background: #c88fb3;
+}
+.source_articles_list:hover .sart_title a {
+  color: #cd0127;
+}
+.source_articles_list,
+.source_articles_list_deeper {
+  padding: 5px;
+}
+.source_articles_list .position1,
+.source_articles_list_deeper .position1 {
+  position: relative;
+}
+.source_articles_list .position1 .sart_title,
+.source_articles_list_deeper .position1 .sart_title,
+.source_articles_list .position1 .art_catid,
+.source_articles_list_deeper .position1 .art_catid,
+.source_articles_list .position1 .art_created,
+.source_articles_list_deeper .position1 .art_created {
+  display: inline-block;
+}
+.source_articles_list .position1 .sart_title h3,
+.source_articles_list_deeper .position1 .sart_title h3 {
+  margin: 0 0 10px 0;
+}
+.source_articles_list .position1 .art_catid,
+.source_articles_list_deeper .position1 .art_catid {
+  position: absolute;
+  right: 50px;
+  top: 7px;
+}
+.source_articles_list .position1 .art_catid a,
+.source_articles_list_deeper .position1 .art_catid a {
+  color: #cb0121;
+}
+.source_articles_list .position1 .art_created,
+.source_articles_list_deeper .position1 .art_created {
+  background: url("../images/date-circle.png") no-repeat center center;
+  font-size: 10px;
+  text-align: center;
+  width: 37px;
+  height: 26px;
+  color: #fff;
+  padding-top: 11px;
+  position: absolute;
+  right: 0px;
+}
+.source_articles_list .position2,
+.source_articles_list_deeper .position2 {
+  display: block;
+}
+.source_articles_list .position2 .sart_image,
+.source_articles_list_deeper .position2 .sart_image {
+  display: inline-block;
+  padding: 2px;
+  background: #fff;
+  box-shadow: 1px 1px 2px #706f70;
+}
+.source_articles_list .position2 .sart_image,
+.source_articles_list_deeper .position2 .sart_image {
+  margin-right: 7px;
+}
+.source_articles_list .position2 .sart_announce,
+.source_articles_list_deeper .position2 .sart_announce {
+  display: inline-block;
+  vertical-align: top;
+}
+.source_articles_list .position2 .sart_announce,
+.source_articles_list_deeper .position2 .sart_announce {
+  width: 400px;
+  font-size: 14px;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+.source_articles_list .position3,
+.source_articles_list_deeper .position3 {
+  display: block;
+  width: auto;
+  height: auto;
+}
+.source_articles_list .position3 .sart_author .label,
+.source_articles_list_deeper .position3 .sart_author .label,
+.source_articles_list .position3 .sart_author .value,
+.source_articles_list_deeper .position3 .sart_author .value {
+  display: inline-block;
+  margin-right: 10px;
+  font-weight: bold;
+  font-size: 12px;
+}
+.source_articles_list .position3 .sart_author .value,
+.source_articles_list_deeper .position3 .sart_author .value {
+  text-decoration: underline;
+}
+/*==================================
+=            PAGINATION            =
+==================================*/
+.pagination p.counter {
+  display: inline-block;
+}
+ul.pagination {
+  list-style: none;
+  margin: 0 0 0 133px;
+  padding: 0;
+  display: inline-block;
+}
+ul.pagination li {
+  display: inline-block;
+  margin-right: 10px;
+}
+ul.pagination li a {
+  font-size: 12px;
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+}
+ul.pagination li a:hover {
+  color: #88005a;
+}
+ul.pagination li span {
+  font-weight: bold;
+  font-size: 12px;
+  color: #88005a;
+}
+/*-----  End of PAGINATION  ------*/
+/*=================================
+=            ROS STYLE            =
+=================================*/
+.hiddenposition {
+  display: none;
+}
+/*-----  End of ROS STYLE  ------*/
+/*==============================
+=            BANNER            =
+==============================*/
+.custom_banner_inner {
+  position: absolute;
+  right: 0px;
+}
+/*-----  End of BANNER  ------*/
+/*===================================
+=            BREADCRUMBS            =
+===================================*/
+.breadcrumbs a {
+  color: #88015a;
+  font-size: 14px;
+  font-style: italic;
+}
+.breadcrumbs span {
+  color: #a8011e;
+  font-style: italic;
+  font-size: 14px;
+}
+/*-----  End of BREADCRUMBS  ------*/

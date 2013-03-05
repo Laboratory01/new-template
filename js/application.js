@@ -28,3 +28,21 @@ if (typeof jQuery != 'undefined') {
         $('.content tr:not(thead tr, tfoot tr):odd, li:odd').addClass('odd');
     });
 }
+
+
+jQuery(document).ready(function($) {
+    $('select').each(function() {
+        var $this = $(this),
+            elm = $this.find('option').first().text(),
+            el = '<div id="sel" style="position: absolute;">';
+        $this.parent('.value').prepend(el + elm);
+    })
+    $('select').change(function() {
+        var el  = "";
+        str = $(this).find('option:selected').text();
+        $(this).parent('.value').find('div #sel').html('');
+        $(this).parent().find('div').text(str);
+    });
+});
+
+
