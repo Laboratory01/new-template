@@ -33,16 +33,33 @@ if (typeof jQuery != 'undefined') {
 jQuery(document).ready(function($) {
     $('select').each(function() {
         var $this = $(this),
-            elm = $this.find('option').first().text(),
+            elm = $this.find('option:selected').text(),
             el = '<div id="sel" style="position: absolute;">';
         $this.parent('.value').prepend(el + elm);
-    })
+    });
     $('select').change(function() {
         var el  = "";
-        str = $(this).find('option:selected').text();
+            str = $(this).find('option:selected').text();
         $(this).parent('.value').find('div #sel').html('');
-        $(this).parent().find('div').text(str);
+        $(this).parent().find('div').val(str);
     });
+
+    /*=================================
+    =            Item page            =
+    =================================*/
+
+
+    var tpl = '<ul class="nav nav-tabs" id="item_htabs">' + '<li><a href="#description" data-toggle="tab">Описание</a></li>' + '<li><a href="#gallery" data-toggle="tab">Галерея</a></li>' + '<li><a href="#video" data-toggle="tab">Видео</a></li>' + '</ul>';
+    var target = $('.cck-line-bottom .seb_css3');
+        target.children().wrapAll('<div class="tab-content" />');
+        target.find('.cck_description').attr('id','description');
+        target.find('.cck_company_video').attr('id','video');
+        target.find('.cck_cat_gallery').attr('id','gallery');
+        target.each(function() {
+            $(this).find('.cck_contents').addClass('tab-pane');
+        });
+    $('.cck-line-bottom .seb_css3').prepend(tpl);
+        $('#item_htabs a:first').tab('show');
 });
 
 

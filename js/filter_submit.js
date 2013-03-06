@@ -1,5 +1,10 @@
 jQuery(document).ready(function($){
 	$('#seblod_form').change(function(){
-		$('#seblod_form').submit();
+		$.ajax({
+			url: $('#seblod_form').attr('action'),  
+			type:'GET',
+			data: $('#seblod_form').serialize()
+		});
+
 	});
 });

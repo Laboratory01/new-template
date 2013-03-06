@@ -114,7 +114,7 @@ body:after {
   display: block;
   margin: 0 auto;
   padding: 0px;
-  width: 970px;
+  width: 966px;
   box-shadow: 2px 2px 3px #000;
   overflow: hidden;
   position: relative;
@@ -167,18 +167,19 @@ header ul.menu_second {
   text-align: right;
   font-family: 'Roboto Condensed', sans-serif;
 }
+header ul.menu_second span {
+  font-size: 12pt;
+}
 header ul.menu_second li {
   margin-right: 16px;
   display: inline-block;
 }
-header ul.menu_second li a,
-header ul.menu_second li span {
+header ul.menu_second li a {
   color: #8e1558;
   text-decoration: underline;
   font-size: 15px;
 }
-header ul.menu_second li a:hover,
-header ul.menu_second li span:hover {
+header ul.menu_second li a:hover {
   text-decoration: none;
 }
 /*-----  End of Header Second Menu  ------*/
@@ -186,7 +187,6 @@ header ul.menu_second li span:hover {
 =            Header Create Date            =
 ==========================================*/
 .created-date {
-  font-size: 11px;
   font-weight: bold;
   display: inline;
   margin-left: 55px;
@@ -197,6 +197,7 @@ header ul.menu_second li span:hover {
 .created-date .custom p {
   display: inline;
   margin: 0;
+  font-size: 12px;
 }
 /*-----  End of Header Create Date  ------*/
 /*===============================
@@ -244,6 +245,7 @@ section input#mod-search-searchword {
   box-shadow: inset 1px 1px 2px #000;
   height: 27px;
   padding-left: 6px;
+  font-size: 80%;
 }
 section .search-button {
   background: url("../images/search-button.png") no-repeat;
@@ -254,6 +256,13 @@ section input[type=submit] {
   border: none;
 }
 /*==========  Section Header Navbar  ==========*/
+section .image-title {
+  font-size: 12px;
+  font-weight: bold;
+  left: 225px;
+  position: absolute;
+  top: 242px;
+}
 section .section-header-navbar-icons {
   display: block;
   background-image: url("../images/navbar-icons.png");
@@ -402,6 +411,7 @@ section .section-header-navbar ul li:hover span {
 =            RIGHT COLUMN            =
 ====================================*/
 .main {
+  position: relative;
   zoom: 1;
 }
 .main:before,
@@ -411,6 +421,21 @@ section .section-header-navbar ul li:hover span {
 }
 .main:after {
   clear: both;
+}
+.main .firstJournalText {
+  position: absolute;
+  left: -143px;
+  top: 200px;
+  color: #fff;
+  font-size: 18px;
+  -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
+  -o-transform: rotate(-90deg);
+  display: inline-block;
+  padding-left: 8px;
+  vertical-align: text-top;
+  text-indent: 0px;
+  display: inline;
 }
 .right-column {
   float: right;
@@ -441,11 +466,12 @@ section .section-header-navbar ul li:hover span {
 .right-column .header-block {
   border-left: 1px solid #e8e8e8;
   border-bottom: 1px solid #e8e8e8;
-  border-right: 1px solid #e8e8e8;
 }
 .right-column .module-content {
   padding: 10px;
-  margin-bottom: 0px;
+}
+.right-column .module-content p {
+  padding-right: 10px;
 }
 .right-column .module-content ul {
   vertical-align: middle;
@@ -468,13 +494,19 @@ section .section-header-navbar ul li:hover span {
 .right-column .favorites .module-content {
   height: auto;
 }
+.right-column .favorites .module-content p {
+  padding-right: 10px;
+}
+.right-column .custom_calc {
+  text-align: right;
+}
 /*-----  End of RIGHT COLUMN  ------*/
 /*==============================
 =            FOOTER            =
 ==============================*/
 footer {
   margin: 0 auto;
-  padding: 0;
+  padding: 10px 0 0 0;
   height: 60px;
   width: 970px;
 }
@@ -485,7 +517,7 @@ footer .footer-links {
   color: #010101;
   font-size: 16px;
   vertical-align: middle;
-  font-weight: bold;
+  font-family: Myriad Pro;
 }
 footer .footer-links ul {
   list-style: none;
@@ -512,8 +544,9 @@ footer .footer-links ul li {
 }
 footer .footer-links ul li a {
   color: #000;
-  font-weight: bold;
   text-decoration: underline;
+  margin-right: 12px;
+  font-family: 'Myriad Pro';
 }
 footer .footer-links ul li a:hover {
   text-decoration: none;
@@ -530,7 +563,7 @@ footer .footer-links ul li a:hover {
 }
 .main-img {
   position: absolute;
-  top: 119px;
+  top: -146px;
   left: 38%;
 }
 /*-----  End of MAIN IMAGE ON INDEX  ------*/
@@ -615,6 +648,7 @@ ul.nav li.active ul li ul li {
 }
 .form .position1 div.field {
   display: inline-block;
+  margin-right: 12px !important;
 }
 .form .position1 select {
   width: 118px;
@@ -687,7 +721,7 @@ label[for=ct_price] {
 }
 /*-----  End of SEBLOD  ------*/
 .component {
-  width: 606px;
+  width: 600px;
   position: relative;
 }
 .component h1 {
@@ -846,3 +880,52 @@ ul.pagination li span {
   font-size: 14px;
 }
 /*-----  End of BREADCRUMBS  ------*/
+/*====================================
+=            CONTENT TABS            =
+====================================*/
+.seb_css3 ul#item_htabs {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.seb_css3 ul#item_htabs li a {
+  text-decoration: none;
+  color: #88015a;
+}
+.seb_css3 ul#item_htabs li.active a {
+  color: #fff;
+}
+.seb_css3 ul.nav {
+  height: auto;
+}
+.seb_css3 .tab-content {
+  padding: 10px;
+  border-top: 2px solid #88015a;
+  border-bottom: 2px solid #88015a;
+}
+.seb_css3 .tab-content #description {
+  font-family: 'Roboto Condensed';
+}
+.seb_css3 .tab-content > div {
+  display: none;
+  float: none;
+}
+.seb_css3 .tab-content > div.active {
+  display: block;
+  float: none;
+}
+/*-----  End of CONTENT TABS  ------*/
+/*==========================================
+=            cboxElements image            =
+==========================================*/
+.tab-content .cboxElement {
+  margin-right: 10px;
+}
+.tab-content .cboxElement img {
+  padding: 2px;
+  background: #fff;
+  box-shadow: 1px 1px 2px #333;
+  width: auto;
+  height: 124px;
+}
+/*-----  End of cboxElements image  ------*/
