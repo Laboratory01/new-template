@@ -546,7 +546,7 @@ table {
 
 /*=============================
 =            HTABS            =
-=============================*/
+=============================
 
 .nav-tabs,
 .nav-pills {
@@ -599,7 +599,7 @@ table {
   padding-bottom: 5px;
   line-height: 5px;
   padding-right:8px;
-    background: url(../images/htabs-unactive-bg.png) no-repeat right center; /* Old browsers */
+    background: url(../images/htabs-unactive-bg.png) no-repeat right center; 
 
 }
 .nav-tabs > li > a:hover,
@@ -650,7 +650,7 @@ table {
 
 
 
-/*-----  End of HTABS  ------*/
+-----  End of HTABS  ------*/
 
 
 /*==============================
@@ -663,5 +663,3 @@ td{width:50%;text-align: left;}
 
 
 /*-----  End of TABLES  ------*/
-
-

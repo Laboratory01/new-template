@@ -43,6 +43,11 @@ jQuery(document).ready(function($) {
         $(this).parent('.value').find('div #sel').html('');
         $(this).parent().find('div').text(str);
     });
+
+    $('.nav-tabs').on('click', 'a', function() {
+        $(this).parents("ul").find(".prev-tab").removeClass("prev-tab");
+        $(this).parents().closest("li").prev().addClass("prev-tab");
+    });
 });
 
 

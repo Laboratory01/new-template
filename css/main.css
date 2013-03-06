@@ -541,9 +541,69 @@ footer .footer-links ul li a:hover {
   width: 585px;
   display: inline-block;
 }
+.nav-tabs {
+  border-bottom: 1px solid #ddd;
+  zoom: 1;
+}
+.nav-tabs:before,
+.nav-tabs:after {
+  content: "";
+  display: table;
+}
+.nav-tabs:after {
+  clear: both;
+}
+.nav-tabs li ul {
+  left: 0px;
+}
+.nav-tabs > li {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin-bottom: -1px;
+  line-height: 5px;
+  float: left;
+  padding-right: 10px;
+  background: url("../images/tab-unactive.png") no-repeat right center;
+}
+.nav-tabs > li.prev-tab {
+  background: url("../images/tab-unactive-prev.png") no-repeat right center;
+}
+.nav-tabs > li:last-child {
+  background: url("../images/tab-unactive-last.png") no-repeat right center;
+}
+.nav-tabs > li > a {
+  padding-right: 5px;
+  padding-left: 5px;
+  margin-right: 1px;
+  line-height: 14px;
+}
+.nav-tabs > .active {
+  background: url("../images/tab-active.png") no-repeat right center;
+}
+.nav-tabs > .active:last-child {
+  background: url("../images/tab-active-last.png") no-repeat right center;
+}
+.nav-tabs > .active > a,
+.nav-tabs > .active > a:hover,
+.nav-tabs > .active > a:focus {
+  color: #fff;
+  cursor: default;
+}
 ul.nav {
   position: relative;
   height: 206px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+ul.nav a {
+  color: #88015a;
+  font-size: 12px;
+  text-decoration: none;
+}
+ul.nav ul {
+  margin: 0;
+  padding: 0;
 }
 ul.nav li ul {
   display: none;
@@ -568,12 +628,7 @@ ul.nav li.active ul ul {
 ul.nav li.active ul ul li {
   padding: 0;
   display: block;
-}
-ul.nav li.active ul li ul li {
-  display: block;
-}
-.nav-tabs li ul li {
-  line-height: 10px;
+  background: none;
 }
 ul.nav li.active ul > li {
   background: url("../images/htabs-heart.jpg") no-repeat left top;
@@ -585,16 +640,21 @@ ul.nav li.active ul > li {
 ul.nav li.active ul li a {
   color: #454140;
 }
-ul.nav li.active ul li ul li {
-  background: none;
-}
-.nav h1,
-.nav h2,
-.nav h3,
-.nav h4,
-.nav h5,
-.nav h6 {
+ul.nav h1,
+ul.nav h2,
+ul.nav h3,
+ul.nav h4,
+ul.nav h5,
+ul.nav h6 {
   margin: 4px 0;
+}
+.nav-tabs li ul li {
+  line-height: 10px;
+}
+.nav-tabs > .active > a,
+.nav-tabs > .active > a:hover,
+.nav-tabs > .active > a:focus {
+  outline: 0;
 }
 /*==============================
 =            SEBLOD            =

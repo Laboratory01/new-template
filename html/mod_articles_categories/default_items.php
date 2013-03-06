@@ -8,6 +8,7 @@
 
 // no direct access
 defined('_JEXEC') or die;
+$tabs = '<br>';
 foreach ($list as $item) :
 
 ?>
@@ -18,11 +19,13 @@ foreach ($list as $item) :
 		<?php echo $item->title;?></a>
   
  	<?php } else { ?>
-	<li <?php if ($_SERVER['PHP_SELF'] == JRoute::_(ContentHelperRoute::getCategoryRoute($item->id))) echo ' class="active"';?>> <?php $levelup=$item->level-$startLevel -1; ?>
+	<!-- <li <?php if ($_SERVER['PHP_SELF'] == JRoute::_(ContentHelperRoute::getCategoryRoute($item->id))) echo ' class="active"';?>> <?php $levelup=$item->level-$startLevel -1; ?>
  	 <h<?php echo $params->get('item_heading')+ $levelup; ?>>
 		<a href="<?php echo JRoute::_(ContentHelperRoute::getCategoryRoute($item->id)); ?>">
 		<?php echo $item->title;?></a>
-   </h<?php echo $params->get('item_heading')+ $levelup; ?>>
+   </h<?php echo $params->get('item_heading')+ $levelup; ?>> -->
+   <?php 
+   $tabs .= $item->title; ?>
  	<?php } ?>
 
  
@@ -43,14 +46,15 @@ foreach ($list as $item) :
 			$list = $temp;
 			echo '</ul>';
 		} else {
-			echo '<ul>';
+			$tabs .= '<ul>';
 			$temp = $list;
 			$list = $item->getChildren();
 			require JModuleHelper::getLayoutPath('mod_articles_categories', $params->get('layout', 'default').'_items');
 			$list = $temp;
-			echo '</ul>';
+			$tabs .= '</ul>';
 		}
 		}	
 		?>
  </li>
-<?php endforeach; ?>
+<?php endforeach; echo $tabs; ?>
+
