@@ -49,10 +49,6 @@ jQuery(document).ready(function($) {
         $(this).parents().closest("li").prev().addClass("prev-tab");
         console.log($(this).parents().closest("li").prev());
     });
-<<<<<<< HEAD
-=======
-
->>>>>>> fixes
     /*=================================
     =            Item page            =
     =================================*/
@@ -69,10 +65,6 @@ jQuery(document).ready(function($) {
         });
     $('.cck-line-bottom .seb_css3').prepend(tpl);
         $('#item_htabs a:first').tab('show');
-<<<<<<< HEAD
-=======
-
->>>>>>> fixes
 });
 
 
