@@ -44,12 +44,10 @@ jQuery(document).ready(function($) {
         $(this).parent().find('div').val(str);
     });
 
-<<<<<<< HEAD
     $('.nav-tabs').on('click', 'a', function() {
         $(this).parents("ul").find(".prev-tab").removeClass("prev-tab");
         $(this).parents().closest("li").prev().addClass("prev-tab");
     });
-=======
     /*=================================
     =            Item page            =
     =================================*/
@@ -66,7 +64,6 @@ jQuery(document).ready(function($) {
         });
     $('.cck-line-bottom .seb_css3').prepend(tpl);
         $('#item_htabs a:first').tab('show');
->>>>>>> 2523b37d6f27c3ac2b9d601ac24531d3926c41ca
 });
 
 
