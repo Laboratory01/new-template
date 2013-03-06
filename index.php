@@ -38,6 +38,9 @@ require_once(dirname(__FILE__) . '/php/_code.php');
             </div>
         </header>
         <section>
+            <div class="image-title">
+                <jdoc:include type="modules" name="image-title" />
+            </div>
             <div class="logo">
                 <jdoc:include type="modules" name="logo" />
             </div>
@@ -65,6 +68,9 @@ require_once(dirname(__FILE__) . '/php/_code.php');
             <?php endif; ?>
         </section>
         <section class="main">
+            <div class="firstJournalText">
+                <jdoc:include type="modules" name="firstJournalText" />
+            </div>
             <div class="component content">
                 <jdoc:include type="modules" name="pre_component" />
                 <div class="messgae"><jdoc:include type="message" /></div>                       
@@ -89,7 +95,7 @@ require_once(dirname(__FILE__) . '/php/_code.php');
                 <jdoc:include type="modules" name="footer" />
             </div>
             <div class="footer-copyright">Разработка портала: LAB01</div>
-            <div class="footer-logo"><img src="/images/logo/footer_logo.png" alt="Первый свадебный интернет-журнал"></div>
+            <div class="footer-logo"><a href="/"><img src="/images/logo/footer_logo.png" alt="Первый свадебный интернет-журнал"></a></div>
             <div class="footer-links">
                 <ul class="footer-link">
                     <li><a href="#">Реклама на сайте</a></li>

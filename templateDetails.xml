@@ -40,6 +40,8 @@
         <position>header-second-menu</position>
         <position>created-date</position>
         <position>section-header-banner</position>
+        <position>image-title</position>
+        <position>firstJournalText</position>
         <position>section-header-socialButtons</position>
         <position>section-header-search</position>
         <position>section-header-navbar</position>
