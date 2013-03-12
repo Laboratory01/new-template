@@ -621,6 +621,8 @@ footer .footer-links ul li a:hover {
 .nav-tabs > .active > a:focus {
   color: #fff;
   cursor: default;
+  position: relative;
+  left: 3px;
 }
 ul.nav {
   position: relative;
@@ -633,6 +635,8 @@ ul.nav a {
   color: #88015a;
   font-size: 12px;
   text-decoration: none;
+  position: relative;
+  right: 6px;
 }
 ul.nav ul {
   margin: 0;
@@ -740,7 +744,7 @@ ul.nav h6 {
   height: 113px;
   display: inline-block;
   vertical-align: top;
-  width: 320px;
+  width: 308px;
 }
 .position3 .description .value p,
 .position3 .description .value {
@@ -880,6 +884,14 @@ label[for=ct_price] {
 .source_articles_list_deeper .position3 .sart_author .value {
   text-decoration: underline;
 }
+.button_more a {
+  color: #d50707;
+}
+.button_more .readmore {
+  padding-left: 15px;
+  font-style: italic;
+  font-size: 13px;
+}
 /*==================================
 =            PAGINATION            =
 ==================================*/
@@ -975,6 +987,21 @@ ul.pagination li span {
   float: none;
 }
 /*-----  End of CONTENT TABS  ------*/
+/*======================================
+=            COMMENTS HTABS            =
+======================================*/
+.item-page ul.nav {
+  height: auto;
+}
+.item-page .tab-content > div {
+  display: none;
+  float: none;
+}
+.item-page .tab-content > div.active {
+  display: block;
+  float: none;
+}
+/*-----  End of COMMENTS HTABS  ------*/
 /*==========================================
 =            cboxElements image            =
 ==========================================*/
@@ -989,3 +1016,10 @@ ul.pagination li span {
   height: 124px;
 }
 /*-----  End of cboxElements image  ------*/
+/*=========================================
+=            FAVORITS RECLAMMA            =
+=========================================*/
+.wedding_catalog_featured {
+  width: auto !important;
+}
+/*-----  End of FAVORITS RECLAMMA  ------*/

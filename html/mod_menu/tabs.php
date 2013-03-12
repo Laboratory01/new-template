@@ -51,24 +51,40 @@ foreach ($list as $i => &$item) :
 		$class = ' class="'.trim($class) .'"';
 	}
 
-	echo '<li'.$class.'>';
+	/*================================
+	=            FOR TABS            =
+	================================*/
+
+	if ($item->lavel == 1) {
+		$k = rand(10,100) + 1;
+	} else {
+		$k = rand(10, 100);
+	}
+
+	echo '<li id="'.$k.'" '.$class.'>';
+	
+	/*-----  End of FOR TABS  ------*/
+	
+	
+
+	//echo '<li'.$class.'>';
 
 	// Render the menu item.
 	switch ($item->type) :
 		case 'separator':
 		case 'url':
 		case 'component':
-			require JModuleHelper::getLayoutPath('mod_menu', 'default_'.$item->type);
+			require JModuleHelper::getLayoutPath('mod_menu', 'tabs_'.$item->type);
 			break;
 
 		default:
-			require JModuleHelper::getLayoutPath('mod_menu', 'default_url');
+			require JModuleHelper::getLayoutPath('mod_menu', 'tabs_url');
 			break;
 	endswitch;
 
 	// The next item is deeper.
 	if ($item->deeper) {
-		echo '<ul>';
+		echo '<ul id="'.$k.'" class="tab-pane">';
 	}
 	// The next item is shallower.
 	elseif ($item->shallower) {

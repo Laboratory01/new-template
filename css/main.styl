@@ -611,6 +611,8 @@ footer .footer-links ul li a:hover
 		& > a:focus
 			color #fff
 			cursor default
+			position relative
+			left 3px
 
 ul.nav
 	position relative
@@ -622,6 +624,8 @@ ul.nav
 		color #88015A
 		font-size 12px
 		text-decoration none
+		position relative
+		right 6px
 	ul
 		margin 0 
 		padding 0
@@ -732,7 +736,7 @@ ul.nav
 	height 113px
 	display inline-block
 	vertical-align top
-	width 320px
+	width 308px
 	.description .value p 
 	.description .value
 		font-size 12px
@@ -838,7 +842,13 @@ label[for=ct_price]
 			.value
 				text-decoration underline
 
-
+.button_more
+	a
+		color #d50707
+	.readmore
+		padding-left 15px
+		font-style italic
+		font-size 13px
 /*==================================
 =            PAGINATION            =
 ==================================*/
@@ -945,6 +955,28 @@ ul.pagination
 
 /*-----  End of CONTENT TABS  ------*/
 
+
+
+/*======================================
+=            COMMENTS HTABS            =
+======================================*/
+
+.item-page
+	ul
+		&.nav
+			height auto
+	.tab-content > div
+		display none
+		float none
+		&.active
+			display block
+			float none
+
+/*-----  End of COMMENTS HTABS  ------*/
+
+
+
+
 /*==========================================
 =            cboxElements image            =
 ==========================================*/
@@ -960,4 +992,13 @@ ul.pagination
 
 
 /*-----  End of cboxElements image  ------*/
+
+/*=========================================
+=            FAVORITS RECLAMMA            =
+=========================================*/
+
+.wedding_catalog_featured 
+	width auto !important
+
+/*-----  End of FAVORITS RECLAMMA  ------*/
 

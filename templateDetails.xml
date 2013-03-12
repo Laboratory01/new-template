@@ -53,6 +53,7 @@
         <position>right-column</position>
         <position>pre_component</position>
         <position>post_component</position>
+        <position>component_footer</position>
         <position>bottom</position>
         <position>footer</position>
         <position>counters</position>
