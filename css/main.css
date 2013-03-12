@@ -663,9 +663,8 @@ ul.nav li.active ul ul {
   padding: 0px 0;
 }
 ul.nav li.active ul ul li {
-  padding: 0;
   display: block;
-  background: none;
+  width: 100%;
 }
 ul.nav li.active ul > li {
   background: url("../images/htabs-heart.jpg") no-repeat left top;

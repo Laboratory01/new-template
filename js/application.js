@@ -98,6 +98,14 @@ var htabs = function(e) {
             // console.log($(this).parents().closest("li").prev());
         });
 
+        $('.deeper .parent').on({
+            mouseenter: function() {
+                $(this).find('ul').slideDown();
+            },
+            mouseleave: function() {
+                $(this).find('ul').slideUp();
+            }
+        });
        // $('ul.nav li:first').addClass('active');
   
 });
